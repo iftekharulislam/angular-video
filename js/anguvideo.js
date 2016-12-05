@@ -54,6 +54,9 @@ angular.module('anguvideo', [])
                                     embedFriendlyUrl = embedFriendlyUrl.replace("m.youtube.com", "youtube.com");
                                 }
                             }
+                        } else {
+                          //added this default condition to load any url directly other than youtube or vimeo
+                          embedFriendlyUrl = newVal;
                         }
 
                         scope.url = $sce.trustAsResourceUrl(embedFriendlyUrl);
